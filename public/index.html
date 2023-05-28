@@ -1,12 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toursita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            tourista: '#c60c31',
+            viacolor: '#E48FA0'
+          },
+        },
+        borderRadius: {
+          '3xl': '2.2rem',
+          'full': '9999px',
+          'lg': '1.5rem'
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-  <h1>Hello World</h1>
+<body class="min-h-screen bg-gradient-to-b from-tourista from-10% to-white to-90%">
+  <header>
+    <nav class="flex justify-between items-center w-[92%] pt-2  mx-auto">
+      <div>
+        <img class="h-16 w-auto cursor-pointer" src="./img/tourista_logo_design.png" alt="tourista">
+      </div>
+      <div
+          class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+          <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+              <li>
+                  <a class="text-white font-semibold leading-6 hover:text-gray-200" href="#">VISA</a>
+              </li>
+              <li>
+                  <a class="text-white font-semibold leading-6 hover:text-gray-200" href="#">FLIGHT</a>
+              </li>
+              <li>
+                  <a class="text-white font-semibold leading-6 hover:text-gray-200" href="#">HOTEL</a>
+              </li>
+              <li>
+                  <a class="text-white font-semibold leading-6 hover:text-gray-200" href="#">HOLIDAYS</a>
+              </li>
+          </ul>
+      </div>
+      <div class="flex items-center gap-6">
+        <button class="bg-[#fff] text-base font-semibold text-red-700 px-5 py-2 rounded-full hover:bg-[#fff]">QUICK VISA</button>
+        
+        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl text-white cursor-pointer md:hidden"></ion-icon>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- banner -->
+    <div class="relative rounded-lg overflow-hidden">
+      <img class="h-48 w-full md:h-full md:w-full py-5 px-5 rounded-3xl" src="/img/toursita_banner.jpg" alt="tourista banner">
+    </div>
+    <!-- banner -->
+
+    <!-- info text -->
+    <div class="flex flex-row items-center py-5 justify-center">
+      <h1 class="font-semibold text-white text-2xl antialiased decoration-4 px-6">FOR ANY QUERY CONTACT US TO <span class="font-bold underline">+8801711-081356</span> OR EMAIL US AT <a href="mailto:visa@tourista.co" class="font-bold underline">VISA@TOURISTA.CO</a></h1>
+    </div>
+
+    <!-- card -->
+    <div class="grid grid-flow-row grid-cols-1 px-4 sm:grid-cols-3">
+      <div class="flex items-center justify-center my-3"><div class="mx-2 my-2 flex max-w-sm flex-col items-center justify-center rounded-lg border border-gray-200 bg-[#c60c31] p-6 dark:border-[#c60c31] shadow-2xl px-6">
+        <?xml version="1.0" ?><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" height="40px" width="40px"><path fill="#FFFFFF" d="M129.6 208c5.25 31.25 25.62 57.13 53.25 70.38C175.3 259.4 170.3 235 168.8 208H129.6zM129.6 176h39.13c1.5-27 6.5-51.38 14.12-70.38C155.3 118.9 134.9 144.8 129.6 176zM224 286.8C231.8 279.3 244.8 252.3 247.4 208H200.5C203.3 252.3 216.3 279.3 224 286.8zM265.1 105.6C272.8 124.6 277.8 149 279.3 176h39.13C313.1 144.8 292.8 118.9 265.1 105.6zM384 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h320c35.2 0 64-28.8 64-64V64C448 28.8 419.2 0 384 0zM336 416h-224C103.3 416 96 408.8 96 400S103.3 384 112 384h224c8.75 0 16 7.25 16 16S344.8 416 336 416zM224 320c-70.75 0-128-57.25-128-128s57.25-128 128-128s128 57.25 128 128S294.8 320 224 320zM265.1 278.4c27.62-13.25 48-39.13 53.25-70.38h-39.13C277.8 235 272.8 259.4 265.1 278.4zM200.6 176h46.88C244.7 131.8 231.8 104.8 224 97.25C216.3 104.8 203.2 131.8 200.6 176z"/></svg>
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight pt-3 text-white">VISA</h5>
+        </a>
+        <p class="mb-3 font-normal text-white">Get the best flight offers from our diversified channel of distributions. Evaluate different flights and get the best for your destination in the blink of an eye. Easy navigation and confirmation with smooth payment option gives you a premium fill in the journey.</p>
+        </div></div>
+      <div class="flex items-center justify-center my-3"><div class="mx-2 my-2 flex max-w-sm flex-col items-center justify-center rounded-lg border border-gray-200 bg-[#c60c31] p-6 dark:border-[#c60c31] shadow-2xl px-6">
+        <?xml version="1.0" ?><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" height="40px" width="40px"><path fill="#FFFFFF" d="M 341.68032,435.72254 C 341.20649,434.97913 318.35103,391.06654 290.89042,338.13903 C 263.42982,285.2115 240.5353,241.47293 240.01371,240.9422 C 239.40475,240.3226 224.87159,254.16767 199.40456,279.62871 C 162.19988,316.82465 159.74472,319.4955 159.75908,322.75711 C 159.76748,324.66943 161.29656,338.73427 163.157,354.01232 L 166.53962,381.79058 L 150.46254,397.93832 L 134.38546,414.08604 L 115.72849,378.57029 L 97.071547,343.05455 L 61.95992,324.72348 C 42.648539,314.6414 26.838515,306.16398 26.826552,305.88476 C 26.814586,305.60554 33.905134,298.28717 42.583321,289.6217 L 58.361846,273.86631 L 89.312123,277.62282 L 120.2624,281.37935 L 160.35096,241.3056 C 191.61286,210.05523 200.13431,201.01341 199.05345,200.23976 C 198.29113,199.69412 153.64225,176.03495 99.833713,147.66383 L 2,96.079986 L 22.204074,75.875926 L 42.408158,55.671865 L 163.17031,87.675347 L 283.93249,119.67882 L 339.1518,64.569475 C 377.85615,25.942215 395.70632,8.7904897 398.8355,7.2211495 C 401.71737,5.7758285 405.77566,4.8204267 410.28434,4.525862 C 419.1547,3.9463348 425.75568,6.5390314 431.62708,12.908736 C 437.08313,18.827845 438.85127,23.292794 438.82691,31.089953 C 438.7893,43.133211 439.47031,42.318501 377.46076,104.50395 L 321.56672,160.55652 L 345.71016,253.81214 C 358.98905,305.10272 372.74731,358.28843 376.28406,372.00258 L 382.71451,396.9374 L 362.62817,417.00581 C 347.70391,431.91672 342.32043,436.72684 341.68032,435.72254 z "/></svg>
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight pt-3 text-white">FLIGHT</h5>
+        </a>
+        <p class="mb-3 font-normal text-white">Get the best flight offers from our diversified channel of distributions. Evaluate different flights and get the best for your destination in the blink of an eye. Easy navigation and confirmation with smooth payment option gives you a premium fill in the journey.</p>
+        </div></div>
+      <div class="flex items-center justify-center my-3"><div class="mx-2 my-2 flex max-w-sm flex-col items-center justify-center rounded-lg border border-gray-200 bg-[#c60c31] p-6 dark:border-[#c60c31] shadow-2xl px-6">
+        <?xml version="1.0" ?><svg viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg" height="40px" width="58px"><path fill="#FFFFFF" d="M560 64c8.84 0 16-7.16 16-16V16c0-8.84-7.16-16-16-16H16C7.16 0 0 7.16 0 16v32c0 8.84 7.16 16 16 16h15.98v384H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h240v-80c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v80h240c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16h-16V64h16zm-304 44.8c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm0 96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zm-128-96c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4zM179.2 256h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4c0 6.4-6.4 12.8-12.8 12.8zM192 384c0-53.02 42.98-96 96-96s96 42.98 96 96H192zm256-140.8c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4zm0-96c0 6.4-6.4 12.8-12.8 12.8h-38.4c-6.4 0-12.8-6.4-12.8-12.8v-38.4c0-6.4 6.4-12.8 12.8-12.8h38.4c6.4 0 12.8 6.4 12.8 12.8v38.4z"/></svg>
+        <a href="#">
+          <h5 class="mb-2 text-2xl font-semibold tracking-tight pt-3 text-white">HOTELS</h5>
+        </a>
+        <p class="mb-3 font-normal text-white">Get the best flight offers from our diversified channel of distributions. Evaluate different flights and get the best for your destination in the blink of an eye. Easy navigation and confirmation with smooth payment option gives you a premium fill in the journey.</p>
+        </div></div>
+    </div>
+    <!-- card -->
+
+    <!-- footer -->
+    <div class="grid sm:grid-cols-2 grid-cols-1 grid-flow-row py-4">
+      <div class="flex items-start justify-start pl-3 m-4"><span class="font-medium antialiased">copyright  tourista.co. All rights reserved</span>
+        </div>
+      <div class="flex items-end justify-end pl-3 m-4"><span class="font-medium antialiased">visa@tourista.com | +8801711-081356</span></div>
+    </div>
+    <!-- footer -->
+
+
+  </main>
+
+  <script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[3%]')
+    }
+  </script>
 </body>
+
 </html>
