@@ -32,25 +32,12 @@
       </div>
       <div
           class="nav-links duration-500 md:static absolute md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5 z-20">
-          <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-              <li>
-                  <a class="text-black font-semibold leading-6 hover:text-gray-500" href="#">VISA</a>
-              </li>
-              <li>
-                  <a class="text-black font-semibold leading-6 hover:text-gray-500" href="#">FLIGHT</a>
-              </li>
-              <li>
-                  <a class="text-black font-semibold leading-6 hover:text-gray-500" href="#">HOTEL</a>
-              </li>
-              <li>
-                  <a class="text-black font-semibold leading-6 hover:text-gray-500" href="#">PLAN A TRIP</a>
-              </li>
-          </ul>
+          
       </div>
       <div class="flex items-center gap-6">
-        <button class="bg-[#F8DA6C] text-base font-semibold text-black px-5 py-2 rounded-full hover:bg-[#FAE28B] drop-shadow-md"><a href="tel:+8801711925054">QUICK VISA QUERY</a></button>
+        <button class="bg-[#F8DA6C] text-sm sm:text-base font-semibold text-black px-5 py-2 rounded-full hover:bg-[#FAE28B] drop-shadow-md"><a href="/quick-visa-query">QUICK VISA QUERY</a></button>
         
-        <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl text-black cursor-pointer md:hidden z-20"></ion-icon>
+        
       </div>
     </nav>
   </header>
@@ -111,13 +98,7 @@ Experience the art of unforgettable stays with our exceptional hotel support!</p
 
   </main>
 
-  <script>
-    const navLinks = document.querySelector('.nav-links')
-    function onToggleMenu(e){
-        e.name = e.name === 'menu' ? 'close' : 'menu'
-        navLinks.classList.toggle('top-[5%]')
-    }
-  </script>
+  
 </body>
 
 </html>
